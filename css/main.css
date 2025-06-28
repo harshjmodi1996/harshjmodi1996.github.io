@@ -5302,3 +5302,20 @@ a.credit {
 /* Common Style */
 .section {
   padding-bottom: 0; }
+
+/* Compact Key Skills */
+.progress-badge {
+  font-size: 1rem;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+.progress {
+  margin-bottom: 0.2rem;
+  background: #e0e7ef;
+}
+.card-body .row > [class^="col-"] {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
