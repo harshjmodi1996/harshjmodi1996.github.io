@@ -19,7 +19,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Stream Countdown</title>
+<title>Meghna & Harsh Wedding</title>
 <style>
 :root{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
 body{display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0;background:linear-gradient(135deg,#0f172a,#0f3b2e);color:#e6fffa}
@@ -38,7 +38,7 @@ footer{margin-top:14px;font-size:12px;opacity:0.8}
 </head>
 <body>
 <div class="card" role="region" aria-label="Stream countdown">
-<h1>We love the enthusiasm</h1>
+<h1>We love the enthusiasm!!</h1>
 <p class="lead">The stream begins at <strong>4:00 PM Central Time</strong> on <strong>November 28, 2025</strong>.</p>
 <div class="target" id="targetString" aria-live="polite"></div>
 
@@ -58,14 +58,12 @@ footer{margin-top:14px;font-size:12px;opacity:0.8}
 
 <script>
 // Target: 4:00 PM Central Time (America/Chicago) on 2025-11-28.
-// On Nov 28, 2025 America/Chicago is on standard time (CST) = UTC-6,
-// so 4:00 PM CST == 22:00:00 UTC on 2025-11-28.
-const targetUtc = new Date(Date.UTC(2025, 10, 28, 22, 0, 0)); // month is 0-indexed (10 = November)
+// America/Chicago at that date = UTC-6.
+const targetUtc = Date.parse("2025-11-28T22:00:00Z");
 
 
 const targetStringEl = document.getElementById('targetString');
-// show the exact instant in the viewer's local timezone
-targetStringEl.textContent = 'That is ' + targetUtc.toLocaleString(undefined, {weekday:'long', year:'numeric', month:'long', day:'numeric', hour:'numeric', minute:'2-digit', second:'2-digit', timeZoneName:'short'}) + ' (your local time).';
+targetStringEl.textContent = 'That is ' + new Date(targetUtc).toLocaleString(undefined, {weekday:'long', year:'numeric', month:'long', day:'numeric', hour:'numeric', minute:'2-digit', second:'2-digit', timeZoneName:'short'}) + ' (your local time).';
 
 
 const daysEl = document.getElementById('days');
@@ -79,8 +77,8 @@ function pad(n){return String(n).padStart(2,'0');}
 
 
 function update(){
-const now = new Date();
-let diff = targetUtc - now; // milliseconds
+const now = Date.now();
+let diff = targetUtc - now;
 
 
 if (diff <= 0){
@@ -117,4 +115,10 @@ secsEl.textContent = pad(s);
 
 statusEl.textContent = '';
 }
+
+
+update();
+const timer = setInterval(update, 1000);
+</script>
+</body>
 </html>
