@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5G68T47Y69"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5G68T47Y69');
+  </script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects | Harsh Modi</title>
+  <meta name="description" content="Robotics and control systems projects by Harsh Modi: transformable UAVs, disturbance estimation, pendulum control, and VTOL aircraft design.">
+  <link rel="icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <header id="site-header" class="site-header"></header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Selected Work</span>
+        <h1>Projects</h1>
+        <p>Hardware and control systems projects from my PhD, master's research, and internships, spanning transformable aircraft, learning-based control, and mechanism design.</p>
+      </div>
+    </section>
+
+    <section class="section" data-fade>
+      <div class="container">
+        <div class="card-grid">
+          <div class="card" data-fade>
+            <div class="card-media">
+              <iframe src="https://www.youtube.com/embed/-Cgr8RbE3Ko?si=6ZO6lvTGLkS9mItW" title="MorphoCopter Video" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="card-body">
+              <span class="tag">PhD Project</span>
+              <h3>MorphoCopter</h3>
+              <p><strong>Transformable quad&ndash;bi copter:</strong> design, modeling, and control of a UAV with mid-flight transformation capability for enhanced reachability in challenging, ultra-narrow terrains.</p>
+              <ul>
+                <li>Designed a novel 7-DOF airframe that transforms between quad- and bi-copter configurations mid-flight using a single servo motor.</li>
+                <li>Modeled the transforming dynamics and designed attitude/trajectory controllers, first validated in a custom Gazebo simulation to protect hardware from risky early tuning.</li>
+                <li>Built and flight-tested a working prototype to validate the transformable design concept; results published in IEEE/ASME Transactions on Mechatronics (2025).</li>
+              </ul>
+              <div class="skill-tags" style="margin-top:14px;">
+                <span class="skill-tag">ROS</span>
+                <span class="skill-tag">Gazebo</span>
+                <span class="skill-tag">SolidWorks</span>
+                <span class="skill-tag">Pixhawk</span>
+                <span class="skill-tag">MATLAB/Simulink</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" data-fade>
+            <div class="card-media">
+              <video controls>
+                <source src="images/ILCDOB_v3f.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="card-body">
+              <span class="tag">PhD Project</span>
+              <h3>Disturbance Estimation</h3>
+              <p><strong>Iterative Learning Control (ILC) with Disturbance Observer (DOB):</strong> robust estimation and suppression of disturbances in UAVs using learning among systems with mismatched dynamics.</p>
+              <ul>
+                <li>Combined ILC with a Disturbance Observer to estimate and suppress disturbances by learning across systems with mismatched dynamics.</li>
+                <li>Validated the framework on quadrotor UAVs using system identification experiments, mathematical modeling, and Vicon motion capture ground truth.</li>
+                <li>Reduced disturbance estimation and trajectory tracking error by 80&ndash;90% versus baseline; published in IEEE Robotics and Automation Letters (2024).</li>
+              </ul>
+              <div class="skill-tags" style="margin-top:14px;">
+                <span class="skill-tag">ROS</span>
+                <span class="skill-tag">Vicon</span>
+                <span class="skill-tag">Raspberry Pi</span>
+                <span class="skill-tag">Pixhawk</span>
+                <span class="skill-tag">MATLAB</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" data-fade>
+            <div class="card-media">
+              <iframe src="https://www.youtube.com/embed/NHGj9HEucaE?si=H5cQnD_cjP03OIPt" title="Master's Project Video" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="card-body">
+              <span class="tag">Master's Project</span>
+              <h3>Pendulum-on-UAV Control</h3>
+              <p><strong>Pendulum-on-UAV control:</strong> developed a novel algorithm to control oscillations of an unactuated pendulum attached to a quadrotor, achieving high repeatability in target-hitting tasks.</p>
+              <ul>
+                <li>Designed a robust ROS-based controller with failsafe logic for precise quadrotor trajectory tracking.</li>
+                <li>Developed a control strategy to gradually build pendulum oscillation energy and release it to strike a target through a hoop, reaching 90% task repeatability.</li>
+                <li>Built a gimbal-based attitude test rig with rotary-encoder ground truth to validate attitude estimation and sensor fusion algorithms.</li>
+              </ul>
+              <div class="skill-tags" style="margin-top:14px;">
+                <span class="skill-tag">ROS</span>
+                <span class="skill-tag">Quadrotor UAV</span>
+                <span class="skill-tag">Sensor Fusion</span>
+                <span class="skill-tag">Embedded Control</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" data-fade>
+            <div class="card-media">
+              <img src="images/NTU_image.png" alt="VTOL fixed-wing UAV internship project at NTU">
+            </div>
+            <div class="card-body">
+              <span class="tag">Internship Project</span>
+              <h3>VTOL Fixed-Wing UAV</h3>
+              <p><strong>NTU Summer Internship:</strong> designed and manufactured a mechanism for a vertical takeoff and landing UAV with a bicopter mechanism, enabling smooth transition between hover and fixed-wing flight modes.</p>
+              <ul>
+                <li>Designed a mechanism enabling smooth hover-to-fixed-wing transition, optimized for coincident thrust/rotation axes and compact packaging.</li>
+                <li>Verified strength margins through stress and deformation analysis in ANSYS across design iterations.</li>
+                <li>Additively manufactured the final mechanism, assembled Pixhawk/ESC/BLDC hardware, and ran ground tests of roll/pitch/yaw control.</li>
+              </ul>
+              <div class="skill-tags" style="margin-top:14px;">
+                <span class="skill-tag">ANSYS</span>
+                <span class="skill-tag">Additive Manufacturing</span>
+                <span class="skill-tag">Pixhawk</span>
+                <span class="skill-tag">BLDC Motors</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <script src="js/layout.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
