@@ -60,6 +60,36 @@
           <div class="card" data-fade>
             <div class="card-media">
               <video controls>
+                <source src="images/MorphoCopter_planning_video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="card-body">
+              <span class="tag">PhD Project</span>
+              <h3>MorphoCopter Trajectory Planning</h3>
+              <p><strong>Trajectory and Morphology Planning:</strong> for Morphing Quadrotors in Ultra-Narrow Passages using Limited Perception</p>
+              <ul>
+                <li>Developed an online planning framework that plans trajectory, yaw and fold angle together, so a morphing quadrotor can fold and unfold on its own to fly through gaps narrower than its unfolded width, using only a 2D LiDAR.</li>
+                <li>Introduced a closed-form cost reduction factor, computed from LiDAR data, that turns real narrow openings into low-cost corridors. It sits inside an acados-based nonlinear MPC running at 10 Hz, and a minimum-width limit means it only opens gaps the folded drone can actually fit through.</li>
+                <li>Validated in Gazebo/PX4 simulations and on MorphoCopter hardware through curved, inclined and cluttered passages: 48 successes vs. 13 and 7 collisions vs. 47 against a standard APF baseline. Accepted in IEEE Robotics and Automation Letters (2026).</li>
+              </ul>
+              <div class="skill-tags" style="margin-top:14px;">
+                <span class="skill-tag">ROS2</span>
+                <span class="skill-tag">Gazebo</span>
+                <span class="skill-tag">PX4</span>
+                <span class="skill-tag">Acados</span>
+                <span class="skill-tag">Nonlinear MPC</span>
+                <span class="skill-tag">2D LiDAR</span>
+                <span class="skill-tag">Motion Planning</span>
+              </div>
+            </div>
+          </div>
+
+         
+
+          <div class="card" data-fade>
+            <div class="card-media">
+              <video controls>
                 <source src="images/ILCDOB_v3f.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
